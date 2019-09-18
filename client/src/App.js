@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import signIn from "./components/signIn";
-import footballPage from "./components/footballPage";
+import SignIn from "./components/SignIn";
+import FootballPage from "./components/FootballPage";
 
 
 
@@ -12,8 +12,8 @@ class App extends Component {
       <BrowserRouter >
       <div className="App">
         <Switch>
-          <Route exact path="/" component={signIn} />
-          <Route exact path="/test" component={footballPage} />
+          <Route exact path="/" component={SignIn} />
+          <Route exact path="/test" component={FootballPage} />
         </Switch>
       </div>
       </BrowserRouter>

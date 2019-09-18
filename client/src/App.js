@@ -1,22 +1,24 @@
-import React from 'react';
-import './App.css';
+import React, { Component } from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import signIn from "./components/signIn";
+import footballPage from "./components/footballPage";
 
-function App() {
-  return (
-    <div className="App">
-      <p>V</p>
-      <p>O</p>
-      <p>O</p>
-      <p>R</p>
-      <p>S</p>
-      <p>P</p>
-      <p>E</p>
-      <p>L</p>
-      <p>L</p>
-      <p>E</p>
-      <p>N</p>
-    </div>
-  );
+
+
+class App extends Component {
+  render() {
+    return (
+
+      <BrowserRouter >
+      <div className="App">
+        <Switch>
+          <Route exact path="/" component={signIn} />
+          <Route exact path="/test" component={footballPage} />
+        </Switch>
+      </div>
+      </BrowserRouter>
+    );
+  }
 }
 
 export default App;
